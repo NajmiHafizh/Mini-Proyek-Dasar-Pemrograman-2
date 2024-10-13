@@ -1,1 +1,1 @@
-![MINPRO2 drawio](https://github.com/user-attachments/assets/115e6161-8d82-43dc-a551-e2bcbc9e2a1f)
+![MINPRO2 drawio](https://github.com/user-attachments/assets/e154a464-62de-46ba-b9e9-23aa1d27a583)
