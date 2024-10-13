@@ -1,4 +1,3 @@
-from collections import PenggunaList
 from prettytable import PrettyTable
 # Tabel untuk workout
 tabel_workout = PrettyTable()
@@ -120,7 +119,7 @@ class PenggunaWorkout:
     # Fungsi melihat progress pengguna
     def view_progress(self):
         tabel_pengguna = PrettyTable()
-        tabel_pengguna.atribut_names = ["Data"]
+        tabel_pengguna.field_names = ["Atribute", "Data"]
         tabel_pengguna.add_row(["Nama", self.name])
         tabel_pengguna.add_row(["Umur", self.age])
         tabel_pengguna.add_row(["Tujuan", self.goal])
@@ -167,6 +166,7 @@ def login():
             admin_workout(admin, pengguna_list)
         elif pilihan == "2":
             pengguna_workout(admin, pengguna_list)
+            return  # Setelah pengguna workout selesai, hentikan eksekusi program
         else:
             print("Pilihan tidak valid. Coba lagi.")
 
@@ -208,7 +208,8 @@ def pengguna_workout(admin, pengguna_list):
         elif fitur == "2":
             pengguna.add_workout()
         elif fitur == "3":
-            break
+            print("Terimakasih Telah Menggunakan Program ini")
+            return  # Menghentikan eksekusi fungsi pengguna_workout setelah memilih keluar
         else:
             print("Pilihan tidak valid.")
 
