@@ -1,17 +1,14 @@
-#
-**Praktikum Mini Proyek 2**
 
+# Praktikum Mini Proyek 2
 
-##
-**Profil Diri:**
+## Profil Diri:
 
+#### Nama: Najmi Hafizh Mauludan Zain
+#### NIM: 2409116028 
+#### Kelas: Sistem Informasi A`24
+#### Tema: Program Latihan Fisik Transformasi Kesehatan
 
-###
-  Nama: Najmi Hafizh Mauludan Zain, NIM: 2409116028, Kelas: A, Tema: Program Latihan Fisik Transformasi Kesehatan
-
-
-####
-**FLOWCHART**
+# FLOWCHART dari Program Latihan FIsik Transformasi Kesehatan
 ![MINPRO2 drawio (2)](https://github.com/user-attachments/assets/d8ce4df6-151f-41ce-bddb-9aac542e53e4)
 
 
