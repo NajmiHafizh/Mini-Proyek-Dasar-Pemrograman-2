@@ -18,7 +18,7 @@ class Workout:
 # Kelas Admin untuk mengelola workout
 class AdminWorkout:
     def __init__(self):
-        self.workouts = []  # Daftar workout yang tersedia
+        self.workouts = []  # Daftar workout yang tersedia di prgram latihan fisik transformasi kesehatan
 
     # Fungsi menambah banyak workout
     def create_multiple_workouts(self):
@@ -113,10 +113,10 @@ class PenggunaWorkout:
     def sync_workouts(self):
         synced_history = []
         for workout in self.workout_history:
-            # Cari workout di list admin (based on ID)
+            # Cari workout di list admin 
             for admin_workout in self.available_workouts:
                 if workout.id == admin_workout.id:
-                    synced_history.append(admin_workout)  # Tambah yang cocok (ID sama)
+                    synced_history.append(admin_workout)  # Tambah yang cocok
                     break
         self.workout_history = synced_history  # Update history dengan data yang sudah disinkronkan
 
@@ -158,7 +158,7 @@ def login():
         else:
             print("Pilihan tidak valid. Coba lagi.")
 
-# Login Mode Admin Workout
+# Login untuk Mode Admin Workout
 def admin_workout(admin):
     while True:
         print("\nMenu Admin Workout:")
@@ -169,7 +169,7 @@ def admin_workout(admin):
         print("5. Keluar")
         fitur = input("Pilih Fitur (1-5): ")
         if fitur == "1":
-            admin.create_multiple_workouts()  # Langsung menambah banyak workout
+            admin.create_multiple_workouts()  # Langsung menambahkan banyak workout
         elif fitur == "2":
             admin.read_workouts()
         elif fitur == "3":
@@ -181,15 +181,14 @@ def admin_workout(admin):
         else:
             print("Pilihan tidak valid.")
 
-# Login Mode Pengguna Workout
+# Login untuk Mode Pengguna Workout
 def pengguna_workout(admin, pengguna_list):
-    # Jika sudah pernah login, gunakan data yang sudah ada
     if pengguna_list:
         pengguna = pengguna_list[-1]  # Mengambil data pengguna terakhir
     else:
         pengguna = PenggunaWorkout(admin.workouts)  # Pengguna baru
     
-    pengguna_list.append(pengguna)  # Menambahkan pengguna baru ke daftar pengguna
+    pengguna_list.append(pengguna)  # Menambahkan pengguna baru 
     while True:
         print("\nMenu Pengguna Workout:")
         print("1. Lihat Progress")
@@ -201,10 +200,10 @@ def pengguna_workout(admin, pengguna_list):
         elif fitur == "2":
             pengguna.add_workout()
         elif fitur == "3":
-            print("Terimakasih telah menggunakan aplikasi.")
+            print("Terimakasih telah menggunakan program latihan fisik transformasi kesehatan.")
             break
         else:
             print("Pilihan tidak valid.")
 
-# Menjalankan program
+# Menjalankan program latihan fisik transformasi kesehatan
 login()
